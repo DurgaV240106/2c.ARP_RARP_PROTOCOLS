@@ -1,4 +1,3 @@
-<img width="345" alt="Screenshot 2024-02-27 195923" src="https://github.com/DurgaV240106/2c.ARP_RARP_PROTOCOLS/assets/144870878/d5b61e65-9283-48b8-aa80-014ac145f4b7"># 2c.SIMULATING ARP /RARP PROTOCOLS
 ## AIM
 To write a python program for simulating ARP protocols using TCP.
 ## ALGORITHM:
@@ -22,27 +21,27 @@ server.py
 
 import socket
 
-# Create a socket object
+#Create a socket object
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Define the server address and port
+#Define the server address and port
 server_address = ('localhost', 8888)
 
-# Bind the server to the address and port
+#Bind the server to the address and port
 server_socket.bind(server_address)
 
-# Listen for incoming connections
+#Listen for incoming connections
 server_socket.listen(1)
 
 print("Server is waiting for connections...")
 
 while True:
-    # Accept a connection from a client
+    #Accept a connection from a client
     client_socket, client_address = server_socket.accept()
     
     print(f"Connection from {client_address}")
     
-    # Receive the IP address from the client
+    #Receive the IP address from the client
     ip_address = client_socket.recv(1024).decode()
     
     # Simulate mapping IP to MAC address (for demonstration purposes)
@@ -80,7 +79,7 @@ print(f"The MAC Address for {ip_address} is: {mac_address}")
 
 # Close the connection with the server
 client_socket.close()
-'''
+```
 ## OUPUT - ARP
 <img width="358" alt="Screenshot 2024-02-27 195302" src="https://github.com/DurgaV240106/2c.ARP_RARP_PROTOCOLS/assets/144870878/b5cab22c-4232-40b2-8418-ee734e187475">
 <img width="343" alt="Screenshot 2024-02-27 195314" src="https://github.com/DurgaV240106/2c.ARP_RARP_PROTOCOLS/assets/144870878/38de5d40-2c5c-4f01-b14d-45445b97f64e">
